@@ -1,0 +1,51 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A[2][2],B[2][2],R[2][2];
+    int r1,c1,r2,c2;
+    cout<<"inter rows and coloum 1st matrix"<<endl;
+    cin>>r1>>c1;
+    cout<<"enter rows and colum of 2nd matix"<<endl;
+    cin>>r2>>c2;
+    
+   if(c1!=r2){
+     cout<<"matrix not possible"<<endl;
+   }
+   return 0;
+     
+ cout<<"enter 1st matrix"<<endl;
+ for(int i=0;i<2;i++){
+     for(int j=0;j<2;j++){
+         cin>>A[i][j];
+     }
+ }
+ cout<<"enter 2nd matrix"<<endl;
+ for(int i=0;i<2;i++){
+     for(int j=0;j<2;j++){
+         cin>>B[i][j];
+     }
+ }
+  
+      
+ 
+ for(int i=0;i<2;i++){
+     for(int j=0;j<2;j++){
+         R[i][j]=0;
+         for(int k=0;k<2;k++){
+             R[i][j]+=A[i][k]*B[k][j];
+    
+         }
+     }
+ }
+ cout<<"rsulttt"<<endl;
+ for(int i=0;i<r1;i++){
+     for(int j=0;j<c2;j++){
+         cout<<R[i][j]<<" ";
+         
+     }
+     cout<<endl;
+ }
+    return 0;
+}
